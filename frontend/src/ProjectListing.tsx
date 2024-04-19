@@ -112,7 +112,7 @@ export function ProjectListing({ active, projects, ...groupProps }:
           font={fontUrls.bryantBold}
           material-toneMapped={false}
         >
-          {`${hasNoMouse ? 'Tap' : 'Click'} an \nice cube.`}
+          {`${hasNoMouse ? 'Tap' : 'Click'} on \nmy github.`}
         </Text>
       </animated.group>
       <mesh
