@@ -86,7 +86,7 @@ export function ProjectListing({ active, projects, ...groupProps }:
           position={[0, 0, -5]}
           scale={[2.5, 2.5, 0.1]}
         >
-          <boxBufferGeometry
+          <sphereBufferGeometry
             args={[4, 70, 70]}
             attach="geometry"
           />
