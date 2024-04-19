@@ -101,6 +101,7 @@ export function ProjectListing({ active, projects, ...groupProps }:
             side={DoubleSide}
           />
         </mesh>
+        <mesh onClick={() => window.open('/file.pdf')}>
         <Text
           position={[0, 0, 0]}
           rotation={[0, 0, 0]}
@@ -112,9 +113,11 @@ export function ProjectListing({ active, projects, ...groupProps }:
           font={fontUrls.bryantBold}
           material-toneMapped={false}
         >
-          {`${hasNoMouse ? 'Tap' : 'Click'} on \nmy github.`}
+          {`${hasNoMouse ? 'Tap' : 'Click'} here \nor check out my socials \nlol because backend is hard`}
         </Text>
+        </mesh>
       </animated.group>
+      
       <mesh
         position={[0, 0, 3]}
       >
