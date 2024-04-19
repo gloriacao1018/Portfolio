@@ -11,14 +11,12 @@ import {
   useEventListener,
   // useInterval
 } from 'usehooks-ts';
-import { create } from 'zustand';
+import create from 'zustand';
+import createVanilla from 'zustand/vanilla';
 import { PreloadLocalSvg } from './PreloadLocalSvg';
-import pkg from '@portabletext/toolkit';
-const { nestLists, isPortableTextToolkitList, isPortableTextListItemBlock, isPortableTextToolkitSpan, spanToPlainText, isPortableTextBlock, isPortableTextToolkitTextNode, buildMarksTree } = pkg;
-
+// import { Html } from '@react-three/drei';
 import { useHasNoMouse } from './useHasNoMouse';
 import { useParamOnLoad } from './useParamOnLoad';
-import createVanilla from 'zustand/vanilla';
 
 /** Allowed cursor state names (project specific) */
 export type CustomCursorState = null
@@ -34,7 +32,7 @@ export type CustomCursorState = null
  | 'external'
  | 'none'
  | 'linked-in'
-  | 'github'
+ | 'twitter'
 
 /** Cant use <Head> tag or SSR inside CustomCursorRenderer,
   * since it conditionally runs based on user env
@@ -118,7 +116,11 @@ const CustomCursorRenderer = ({ cursor }:{cursor:CustomCursorState}) => {
             LinkedIn
           </>
         )}
-        
+        {cursor === 'twitter' && (
+          <>
+            Twitter
+          </>
+        )}
       </div>
     </div>
   );

@@ -194,7 +194,7 @@ export const ProjectEntry = ({
               attach="geometry"
             />
             <MeshDistortMaterial
-              color={new Color('#FF5733')}
+              color={colors.cyan}
               speed={6}
               radius={1}
               distort={0.5}

@@ -1,10 +1,6 @@
-## Frontend - Next.js
-```bash
-yarn build
+cd frontend
 yarn dev
-```
 
-## Backend - Sanity
-```bash
+cd backend
 yarn dev
-```
+
